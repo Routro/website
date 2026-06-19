@@ -5,93 +5,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Chataion Messenger</title>
     <link rel="stylesheet" href="../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        .policy-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
+        .policy-page {
+            background: #ffffff;
         }
-        
-        .policy-header {
+
+        .policy-hero {
+            padding: 6rem 2rem;
+            background:
+                radial-gradient(circle at top left, rgba(37, 99, 235, 0.22), transparent 35%),
+                linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: #ffffff;
             text-align: center;
+        }
+
+        .policy-hero-content {
+            max-width: 840px;
+            margin: 0 auto;
+        }
+
+        .policy-hero-badge {
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .policy-hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 1.08;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.25rem;
+        }
+
+        .policy-hero p {
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        .policy-content-section {
+            padding: 6rem 0;
+            background: #ffffff;
+        }
+
+        .policy-container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #fffbeb;
+            border: 1px solid #f59e0b;
+            border-radius: 999px;
+            padding: 0.65rem 1rem;
+            margin-bottom: 2rem;
+            color: #92400e;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .policy-header {
+            max-width: 780px;
             margin-bottom: 3rem;
         }
-        
-        .policy-header h1 {
-            font-size: 2.5rem;
-            color: #1f2937;
+
+        .section-label {
+            display: inline-block;
+            margin-bottom: 0.75rem;
+            color: #2563eb;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .policy-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            color: #111827;
             margin-bottom: 1rem;
         }
-        
+
         .policy-header p {
             font-size: 1.1rem;
             color: #6b7280;
+            line-height: 1.7;
         }
-        
-        .policy-section {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+        .policy-layout {
+            display: grid;
+            grid-template-columns: 240px minmax(0, 1fr);
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .policy-sidebar {
+            position: sticky;
+            top: 96px;
+            background: #f8fafc;
             border: 1px solid #e5e7eb;
-            margin-bottom: 2rem;
+            border-radius: 20px;
+            padding: 1.25rem;
         }
-        
-        .policy-section h2 {
-            color: #1f2937;
-            font-size: 1.5rem;
+
+        .policy-sidebar h3 {
+            color: #111827;
+            font-size: 0.95rem;
+            font-weight: 800;
             margin-bottom: 1rem;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.5rem;
         }
-        
+
+        .policy-sidebar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .policy-sidebar li {
+            margin-bottom: 0.65rem;
+        }
+
+        .policy-sidebar a {
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .policy-sidebar a:hover {
+            color: #2563eb;
+        }
+
+        .policy-main {
+            min-width: 0;
+        }
+
+        .policy-section {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 24px;
+            padding: 2.25rem;
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.06);
+            margin-bottom: 1.5rem;
+            scroll-margin-top: 110px;
+        }
+
+        .policy-section h2 {
+            color: #111827;
+            font-size: 1.45rem;
+            line-height: 1.25;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            padding-bottom: 0.85rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
         .policy-section h3 {
             color: #374151;
-            font-size: 1.2rem;
-            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.35;
+            font-weight: 800;
+            margin: 1.5rem 0 0.65rem;
         }
-        
+
         .policy-section p {
             color: #6b7280;
-            line-height: 1.7;
+            line-height: 1.75;
             margin-bottom: 1rem;
+            font-size: 1rem;
         }
-        
+
         .policy-section ul {
             color: #6b7280;
-            line-height: 1.7;
-            margin-left: 1.5rem;
+            line-height: 1.75;
+            margin-left: 1.25rem;
             margin-bottom: 1rem;
+            padding-left: 0.5rem;
         }
-        
+
         .policy-section li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.55rem;
+            padding-left: 0.15rem;
         }
-        
-        .last-updated {
-            background: #fef3c7;
-            border: 1px solid #f59e0b;
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 2rem;
-            color: #92400e;
+
+        .policy-section a {
+            color: #2563eb;
+            font-weight: 700;
+            text-decoration: none;
         }
-        
+
+        .policy-section a:hover {
+            text-decoration: underline;
+        }
+
         .back-link {
-            display: inline-block;
-            margin-top: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1rem;
             color: #2563eb;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 700;
+            transition: gap 0.2s ease, color 0.2s ease;
         }
-        
+
         .back-link:hover {
-            text-decoration: underline;
+            gap: 0.65rem;
+            color: #1d4ed8;
+        }
+
+        @media (max-width: 900px) {
+            .policy-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .policy-sidebar {
+                position: static;
+            }
+
+            .policy-sidebar ul {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0.65rem 1rem;
+            }
+
+            .policy-sidebar li {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .policy-hero {
+                padding: 5rem 1.25rem;
+            }
+
+            .policy-content-section {
+                padding: 4rem 0;
+            }
+
+            .policy-container {
+                padding: 0 1.25rem;
+            }
+
+            .policy-section {
+                padding: 1.5rem;
+                border-radius: 20px;
+            }
+
+            .policy-sidebar ul {
+                grid-template-columns: 1fr;
+            }
+
+            .last-updated {
+                border-radius: 16px;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
-<body>
+
+<body class="policy-page">
     <header>
         <nav>
             <div class="nav-container">
@@ -107,279 +297,310 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
+        <section class="policy-hero">
+            <div class="policy-hero-content">
+                <span class="policy-hero-badge">Privacy, transparency, and user control</span>
                 <h1>Privacy Policy</h1>
-                <p>How Chataion handles your data, privacy, and security</p>
+                <p>
+                    Learn how Chataion handles data, privacy, security, Telegram integration,
+                    AI-powered features, analytics, and advertising.
+                </p>
             </div>
         </section>
 
-        <section class="projects">
+        <section class="policy-content-section">
             <div class="policy-container">
                 <div class="last-updated">
                     <strong>Last Updated:</strong> Jun 2026
                 </div>
 
                 <div class="policy-header">
-                    <h1>Chataion Messenger Privacy Policy</h1>
+                    <span class="section-label">Privacy Policy</span>
+                    <h2>Chataion Messenger Privacy Policy</h2>
                     <p>
-                        Chataion Messenger is designed to help users access messaging, productivity, and AI-powered features while keeping privacy, transparency, and user control at the center of the experience.
+                        Chataion Messenger is designed to help users access messaging, productivity,
+                        and AI-powered features while keeping privacy, transparency, and user control
+                        at the center of the experience.
                     </p>
                 </div>
 
-                <div class="policy-section">
-                    <h2>1. Introduction</h2>
-                    <p>
-                        This Privacy Policy explains how Chataion Messenger (“Chataion”, “we”, “our”, or “us”) collects, uses, stores, and protects information when you use our mobile application and related services.
-                    </p>
-                    <p>
-                        By downloading, accessing, or using Chataion Messenger, you agree to the practices described in this Privacy Policy. If you do not agree with this policy, please do not use the app.
-                    </p>
-                    <p>
-                        Chataion Messenger works with Telegram’s infrastructure and API. Telegram is an independent third-party service, and your use of Telegram-related features may also be subject to Telegram’s own privacy policy and terms.
-                    </p>
+                <div class="policy-layout">
+                    <aside class="policy-sidebar">
+                        <h3>Policy Sections</h3>
+                        <ul>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#information-we-collect">Information We Collect</a></li>
+                            <li><a href="#how-we-use-information">How We Use Information</a></li>
+                            <li><a href="#telegram-integration">Telegram Integration</a></li>
+                            <li><a href="#ai-processing">AI Processing</a></li>
+                            <li><a href="#advertising-and-tracking">Advertising and Tracking</a></li>
+                            <li><a href="#data-sharing">Data Sharing</a></li>
+                            <li><a href="#data-storage-and-security">Data Storage and Security</a></li>
+                            <li><a href="#your-choices-and-rights">Your Choices and Rights</a></li>
+                            <li><a href="#account-deletion">Account Deletion</a></li>
+                            <li><a href="#childrens-privacy">Children’s Privacy</a></li>
+                            <li><a href="#international-data-processing">International Data Processing</a></li>
+                            <li><a href="#changes-to-this-privacy-policy">Changes to This Policy</a></li>
+                            <li><a href="#contact-us">Contact Us</a></li>
+                        </ul>
+                    </aside>
+
+                    <div class="policy-main">
+                        <div id="introduction" class="policy-section">
+                            <h2>1. Introduction</h2>
+                            <p>
+                                This Privacy Policy explains how Chataion Messenger (“Chataion”, “we”, “our”, or “us”) collects, uses, stores, and protects information when you use our mobile application and related services.
+                            </p>
+                            <p>
+                                By downloading, accessing, or using Chataion Messenger, you agree to the practices described in this Privacy Policy. If you do not agree with this policy, please do not use the app.
+                            </p>
+                            <p>
+                                Chataion Messenger works with Telegram’s infrastructure and API. Telegram is an independent third-party service, and your use of Telegram-related features may also be subject to Telegram’s own privacy policy and terms.
+                            </p>
+                        </div>
+
+                        <div id="information-we-collect" class="policy-section">
+                            <h2>2. Information We Collect</h2>
+
+                            <h3>2.1 Account and Authentication Information</h3>
+                            <p>
+                                To let you sign in and use Telegram-based messaging features, we may process information required for authentication and account access, including:
+                            </p>
+                            <ul>
+                                <li>Your phone number used for Telegram authentication</li>
+                                <li>Telegram account identifiers required to connect your account</li>
+                                <li>Profile information available through Telegram, such as your display name, username, and profile photo, depending on your Telegram settings</li>
+                                <li>Authentication tokens or session information needed to keep you signed in securely</li>
+                            </ul>
+
+                            <h3>2.2 Messaging and Content Data</h3>
+                            <p>
+                                Chataion may allow you to view, manage, summarize, translate, transcribe, or reply to content from your Telegram chats. This may include messages, voice notes, files, links, media, and conversation context that you choose to access or process inside the app.
+                            </p>
+                            <p>
+                                We do not sell your message content. We do not use your private conversations for advertising targeting. Where content is processed for AI-powered features, it is processed only to provide the feature you requested, such as summarizing a conversation, generating a reply, translating text, or transcribing a voice note.
+                            </p>
+
+                            <h3>2.3 AI Feature Data</h3>
+                            <p>
+                                When you use AI-powered features, Chataion may process the content you provide or select for that specific action. This may include:
+                            </p>
+                            <ul>
+                                <li>Selected chat messages or recent conversation context</li>
+                                <li>Voice notes or audio content selected for transcription</li>
+                                <li>Text, files, or prompts you submit to the AI assistant</li>
+                                <li>Generated outputs such as summaries, replies, translations, or transcriptions</li>
+                            </ul>
+                            <p>
+                                AI features are intended to be user-initiated. You remain in control of what content you choose to process with AI features.
+                            </p>
+
+                            <h3>2.4 Usage and Analytics Data</h3>
+                            <p>
+                                We may collect usage and performance data to understand how the app is used, improve reliability, fix bugs, and improve the product experience. This may include:
+                            </p>
+                            <ul>
+                                <li>Feature interactions and app navigation events</li>
+                                <li>Session duration and general usage patterns</li>
+                                <li>Crash reports, diagnostics, and error logs</li>
+                                <li>App version, operating system version, device model, and language settings</li>
+                            </ul>
+
+                            <h3>2.5 Advertising Data</h3>
+                            <p>
+                                Chataion may display ads. To support advertising, measurement, fraud prevention, and ad performance reporting, we and our advertising partners may process certain information, including:
+                            </p>
+                            <ul>
+                                <li>Advertising identifiers, such as Apple’s Identifier for Advertisers (IDFA), where permitted</li>
+                                <li>Ad impressions, clicks, and ad performance events</li>
+                                <li>Device information, approximate location, and network information where required for ad delivery and measurement</li>
+                            </ul>
+                            <p>
+                                Where required by Apple’s App Tracking Transparency framework, we will request your permission before accessing the IDFA or tracking your activity across other companies’ apps and websites.
+                            </p>
+
+                            <h3>2.6 Device and Technical Data</h3>
+                            <p>
+                                We may collect technical information needed to operate, secure, and improve the app, including:
+                            </p>
+                            <ul>
+                                <li>Device type and model</li>
+                                <li>Operating system and app version</li>
+                                <li>IP address and approximate region</li>
+                                <li>Network status and connection information</li>
+                                <li>Security, fraud prevention, and diagnostic signals</li>
+                            </ul>
+                        </div>
+
+                        <div id="how-we-use-information" class="policy-section">
+                            <h2>3. How We Use Information</h2>
+                            <p>We use the information described above to:</p>
+                            <ul>
+                                <li>Provide, operate, and maintain Chataion Messenger</li>
+                                <li>Authenticate your Telegram account and keep your session secure</li>
+                                <li>Display and manage Telegram-based conversations inside the app</li>
+                                <li>Provide AI-powered features such as summaries, reply suggestions, translations, and voice note transcription</li>
+                                <li>Improve app performance, usability, reliability, and security</li>
+                                <li>Analyze feature usage and understand product performance</li>
+                                <li>Show ads, measure ad performance, and prevent advertising fraud</li>
+                                <li>Detect, prevent, and respond to abuse, fraud, security incidents, and technical issues</li>
+                                <li>Comply with applicable legal obligations</li>
+                            </ul>
+                        </div>
+
+                        <div id="telegram-integration" class="policy-section">
+                            <h2>4. Telegram Integration</h2>
+                            <p>
+                                Chataion Messenger is an independent app that works with Telegram’s API and infrastructure. Telegram is not owned or operated by Chataion.
+                            </p>
+                            <p>
+                                When you use Telegram-related features inside Chataion, some of your information and communications may be processed by Telegram according to Telegram’s own privacy policy and terms. This may include Telegram account data, messages, media, contacts, and other Telegram service data.
+                            </p>
+                            <p>
+                                Chataion does not control Telegram’s servers, data handling practices, or account-level privacy settings. We recommend reviewing Telegram’s privacy policy to understand how Telegram handles your data.
+                            </p>
+                        </div>
+
+                        <div id="ai-processing" class="policy-section">
+                            <h2>5. AI Processing</h2>
+                            <p>
+                                Chataion includes AI-powered productivity features. These features may help you summarize conversations, draft replies, translate messages, transcribe voice notes, analyze content, or interact with an AI assistant.
+                            </p>
+                            <p>
+                                When you choose to use an AI feature, the selected content may be processed by Chataion and/or trusted AI service providers solely to generate the requested output. For example, if you ask Chataion to summarize a conversation, the relevant conversation context may be processed to produce that summary.
+                            </p>
+                            <p>
+                                We aim to limit AI processing to the content needed for the feature you request. You should avoid submitting highly sensitive information to AI features unless you are comfortable with it being processed for that purpose.
+                            </p>
+                        </div>
+
+                        <div id="advertising-and-tracking" class="policy-section">
+                            <h2>6. Advertising and Tracking</h2>
+                            <p>
+                                Chataion may use third-party advertising services to show ads in the app. These services may collect or receive information from your device to deliver ads, measure ad performance, prevent fraud, and improve ad relevance.
+                            </p>
+                            <p>
+                                Depending on your consent and device settings, advertising partners may use data such as advertising identifiers, device information, approximate location, ad interactions, and usage signals.
+                            </p>
+                            <p>
+                                You can manage tracking permission through iOS privacy settings. If you deny tracking permission, we may still show ads, but they may be less personalized.
+                            </p>
+                        </div>
+
+                        <div id="data-sharing" class="policy-section">
+                            <h2>7. Data Sharing</h2>
+                            <p>
+                                We do not sell your personal information. We may share limited information only when necessary for the following purposes:
+                            </p>
+                            <ul>
+                                <li>With Telegram, when required to provide Telegram-based functionality</li>
+                                <li>With AI service providers, when you use AI-powered features</li>
+                                <li>With analytics and crash reporting providers, to improve app stability and performance</li>
+                                <li>With advertising partners, to show ads, measure performance, and prevent fraud</li>
+                                <li>With infrastructure and service providers that help us operate the app</li>
+                                <li>When required by law, legal process, or enforceable government request</li>
+                                <li>To protect the rights, safety, and security of users, Chataion, or others</li>
+                            </ul>
+                            <p>
+                                Service providers are expected to process information only for the purposes we authorize and to apply appropriate security protections.
+                            </p>
+                        </div>
+
+                        <div id="data-storage-and-security" class="policy-section">
+                            <h2>8. Data Storage and Security</h2>
+
+                            <h3>8.1 Security Measures</h3>
+                            <p>
+                                We use technical and organizational safeguards designed to protect information from unauthorized access, loss, misuse, alteration, or disclosure.
+                            </p>
+
+                            <h3>8.2 Encryption</h3>
+                            <p>
+                                Chataion uses secure communication protocols where appropriate. Telegram messages are handled through Telegram’s infrastructure, and Telegram’s encryption model depends on the type of chat and Telegram feature being used.
+                            </p>
+
+                            <h3>8.3 Data Retention</h3>
+                            <p>
+                                We retain information only for as long as needed to provide the app, operate our services, comply with legal obligations, resolve disputes, improve security, and enforce our policies.
+                            </p>
+                            <p>
+                                Some data may remain with Telegram or other third-party services according to their own retention practices.
+                            </p>
+                        </div>
+
+                        <div id="your-choices-and-rights" class="policy-section">
+                            <h2>9. Your Choices and Rights</h2>
+                            <p>
+                                Depending on your location and applicable law, you may have rights regarding your personal information, including the right to:
+                            </p>
+                            <ul>
+                                <li>Access the personal information we hold about you</li>
+                                <li>Request correction of inaccurate information</li>
+                                <li>Request deletion of certain information</li>
+                                <li>Object to or restrict certain processing</li>
+                                <li>Withdraw consent where processing is based on consent</li>
+                                <li>Manage advertising tracking permissions through your device settings</li>
+                                <li>Delete your account or disconnect your Telegram account where supported</li>
+                            </ul>
+                            <p>
+                                To exercise these rights, please contact us using the contact details listed below.
+                            </p>
+                        </div>
+
+                        <div id="account-deletion" class="policy-section">
+                            <h2>10. Account Deletion</h2>
+                            <p>
+                                You may request deletion of data associated with your use of Chataion by contacting us. If the app provides an in-app account deletion or disconnect option, you may also use that option directly.
+                            </p>
+                            <p>
+                                Please note that deleting or disconnecting data from Chataion does not automatically delete your Telegram account or data stored by Telegram. To delete your Telegram account or Telegram-hosted data, you must follow Telegram’s own account deletion process.
+                            </p>
+                        </div>
+
+                        <div id="childrens-privacy" class="policy-section">
+                            <h2>11. Children’s Privacy</h2>
+                            <p>
+                                Chataion Messenger is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.
+                            </p>
+                            <p>
+                                If we become aware that we have collected personal information from a child under 13 without appropriate consent, we will take reasonable steps to delete that information.
+                            </p>
+                        </div>
+
+                        <div id="international-data-processing" class="policy-section">
+                            <h2>12. International Data Processing</h2>
+                            <p>
+                                Chataion and its service providers may process information in countries other than your country of residence. These countries may have data protection laws that differ from those in your jurisdiction.
+                            </p>
+                            <p>
+                                Where required, we take appropriate steps to protect personal information when it is transferred internationally.
+                            </p>
+                        </div>
+
+                        <div id="changes-to-this-privacy-policy" class="policy-section">
+                            <h2>13. Changes to This Privacy Policy</h2>
+                            <p>
+                                We may update this Privacy Policy from time to time to reflect changes in our app, services, legal requirements, or data practices.
+                            </p>
+                            <p>
+                                When we make material changes, we may notify you through the app, on our website, or by other appropriate means. The “Last Updated” date at the top of this page shows when the policy was most recently updated.
+                            </p>
+                        </div>
+
+                        <div id="contact-us" class="policy-section">
+                            <h2>14. Contact Us</h2>
+                            <p>
+                                If you have questions, requests, or concerns about this Privacy Policy or our data practices, please contact us at:
+                            </p>
+                            <ul>
+                                <li>Email: <a href="mailto:chataion-privacy@routro.com">chataion-privacy@routro.com</a></li>
+                                <li>General support: <a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="../index.html" class="back-link">← Back to Projects</a>
+                    </div>
                 </div>
-
-                <div class="policy-section">
-                    <h2>2. Information We Collect</h2>
-
-                    <h3>2.1 Account and Authentication Information</h3>
-                    <p>
-                        To let you sign in and use Telegram-based messaging features, we may process information required for authentication and account access, including:
-                    </p>
-                    <ul>
-                        <li>Your phone number used for Telegram authentication</li>
-                        <li>Telegram account identifiers required to connect your account</li>
-                        <li>Profile information available through Telegram, such as your display name, username, and profile photo, depending on your Telegram settings</li>
-                        <li>Authentication tokens or session information needed to keep you signed in securely</li>
-                    </ul>
-
-                    <h3>2.2 Messaging and Content Data</h3>
-                    <p>
-                        Chataion may allow you to view, manage, summarize, translate, transcribe, or reply to content from your Telegram chats. This may include messages, voice notes, files, links, media, and conversation context that you choose to access or process inside the app.
-                    </p>
-                    <p>
-                        We do not sell your message content. We do not use your private conversations for advertising targeting. Where content is processed for AI-powered features, it is processed only to provide the feature you requested, such as summarizing a conversation, generating a reply, translating text, or transcribing a voice note.
-                    </p>
-
-                    <h3>2.3 AI Feature Data</h3>
-                    <p>
-                        When you use AI-powered features, Chataion may process the content you provide or select for that specific action. This may include:
-                    </p>
-                    <ul>
-                        <li>Selected chat messages or recent conversation context</li>
-                        <li>Voice notes or audio content selected for transcription</li>
-                        <li>Text, files, or prompts you submit to the AI assistant</li>
-                        <li>Generated outputs such as summaries, replies, translations, or transcriptions</li>
-                    </ul>
-                    <p>
-                        AI features are intended to be user-initiated. You remain in control of what content you choose to process with AI features.
-                    </p>
-
-                    <h3>2.4 Usage and Analytics Data</h3>
-                    <p>
-                        We may collect usage and performance data to understand how the app is used, improve reliability, fix bugs, and improve the product experience. This may include:
-                    </p>
-                    <ul>
-                        <li>Feature interactions and app navigation events</li>
-                        <li>Session duration and general usage patterns</li>
-                        <li>Crash reports, diagnostics, and error logs</li>
-                        <li>App version, operating system version, device model, and language settings</li>
-                    </ul>
-
-                    <h3>2.5 Advertising Data</h3>
-                    <p>
-                        Chataion may display ads. To support advertising, measurement, fraud prevention, and ad performance reporting, we and our advertising partners may process certain information, including:
-                    </p>
-                    <ul>
-                        <li>Advertising identifiers, such as Apple’s Identifier for Advertisers (IDFA), where permitted</li>
-                        <li>Ad impressions, clicks, and ad performance events</li>
-                        <li>Device information, approximate location, and network information where required for ad delivery and measurement</li>
-                    </ul>
-                    <p>
-                        Where required by Apple’s App Tracking Transparency framework, we will request your permission before accessing the IDFA or tracking your activity across other companies’ apps and websites.
-                    </p>
-
-                    <h3>2.6 Device and Technical Data</h3>
-                    <p>
-                        We may collect technical information needed to operate, secure, and improve the app, including:
-                    </p>
-                    <ul>
-                        <li>Device type and model</li>
-                        <li>Operating system and app version</li>
-                        <li>IP address and approximate region</li>
-                        <li>Network status and connection information</li>
-                        <li>Security, fraud prevention, and diagnostic signals</li>
-                    </ul>
-                </div>
-
-                <div class="policy-section">
-                    <h2>3. How We Use Information</h2>
-                    <p>We use the information described above to:</p>
-                    <ul>
-                        <li>Provide, operate, and maintain Chataion Messenger</li>
-                        <li>Authenticate your Telegram account and keep your session secure</li>
-                        <li>Display and manage Telegram-based conversations inside the app</li>
-                        <li>Provide AI-powered features such as summaries, reply suggestions, translations, and voice note transcription</li>
-                        <li>Improve app performance, usability, reliability, and security</li>
-                        <li>Analyze feature usage and understand product performance</li>
-                        <li>Show ads, measure ad performance, and prevent advertising fraud</li>
-                        <li>Detect, prevent, and respond to abuse, fraud, security incidents, and technical issues</li>
-                        <li>Comply with applicable legal obligations</li>
-                    </ul>
-                </div>
-
-                <div class="policy-section">
-                    <h2>4. Telegram Integration</h2>
-                    <p>
-                        Chataion Messenger is an independent app that works with Telegram’s API and infrastructure. Telegram is not owned or operated by Chataion.
-                    </p>
-                    <p>
-                        When you use Telegram-related features inside Chataion, some of your information and communications may be processed by Telegram according to Telegram’s own privacy policy and terms. This may include Telegram account data, messages, media, contacts, and other Telegram service data.
-                    </p>
-                    <p>
-                        Chataion does not control Telegram’s servers, data handling practices, or account-level privacy settings. We recommend reviewing Telegram’s privacy policy to understand how Telegram handles your data.
-                    </p>
-                </div>
-
-                <div class="policy-section">
-                    <h2>5. AI Processing</h2>
-                    <p>
-                        Chataion includes AI-powered productivity features. These features may help you summarize conversations, draft replies, translate messages, transcribe voice notes, analyze content, or interact with an AI assistant.
-                    </p>
-                    <p>
-                        When you choose to use an AI feature, the selected content may be processed by Chataion and/or trusted AI service providers solely to generate the requested output. For example, if you ask Chataion to summarize a conversation, the relevant conversation context may be processed to produce that summary.
-                    </p>
-                    <p>
-                        We aim to limit AI processing to the content needed for the feature you request. You should avoid submitting highly sensitive information to AI features unless you are comfortable with it being processed for that purpose.
-                    </p>
-                </div>
-
-                <div class="policy-section">
-                    <h2>6. Advertising and Tracking</h2>
-                    <p>
-                        Chataion may use third-party advertising services to show ads in the app. These services may collect or receive information from your device to deliver ads, measure ad performance, prevent fraud, and improve ad relevance.
-                    </p>
-                    <p>
-                        Depending on your consent and device settings, advertising partners may use data such as advertising identifiers, device information, approximate location, ad interactions, and usage signals.
-                    </p>
-                    <p>
-                        You can manage tracking permission through iOS privacy settings. If you deny tracking permission, we may still show ads, but they may be less personalized.
-                    </p>
-                </div>
-
-                <div class="policy-section">
-                    <h2>7. Data Sharing</h2>
-                    <p>
-                        We do not sell your personal information. We may share limited information only when necessary for the following purposes:
-                    </p>
-                    <ul>
-                        <li>With Telegram, when required to provide Telegram-based functionality</li>
-                        <li>With AI service providers, when you use AI-powered features</li>
-                        <li>With analytics and crash reporting providers, to improve app stability and performance</li>
-                        <li>With advertising partners, to show ads, measure performance, and prevent fraud</li>
-                        <li>With infrastructure and service providers that help us operate the app</li>
-                        <li>When required by law, legal process, or enforceable government request</li>
-                        <li>To protect the rights, safety, and security of users, Chataion, or others</li>
-                    </ul>
-                    <p>
-                        Service providers are expected to process information only for the purposes we authorize and to apply appropriate security protections.
-                    </p>
-                </div>
-
-                <div class="policy-section">
-                    <h2>8. Data Storage and Security</h2>
-
-                    <h3>8.1 Security Measures</h3>
-                    <p>
-                        We use technical and organizational safeguards designed to protect information from unauthorized access, loss, misuse, alteration, or disclosure.
-                    </p>
-
-                    <h3>8.2 Encryption</h3>
-                    <p>
-                        Chataion uses secure communication protocols where appropriate. Telegram messages are handled through Telegram’s infrastructure, and Telegram’s encryption model depends on the type of chat and Telegram feature being used.
-                    </p>
-
-                    <h3>8.3 Data Retention</h3>
-                    <p>
-                        We retain information only for as long as needed to provide the app, operate our services, comply with legal obligations, resolve disputes, improve security, and enforce our policies.
-                    </p>
-                    <p>
-                        Some data may remain with Telegram or other third-party services according to their own retention practices.
-                    </p>
-                </div>
-
-                <div class="policy-section">
-                    <h2>9. Your Choices and Rights</h2>
-                    <p>
-                        Depending on your location and applicable law, you may have rights regarding your personal information, including the right to:
-                    </p>
-                    <ul>
-                        <li>Access the personal information we hold about you</li>
-                        <li>Request correction of inaccurate information</li>
-                        <li>Request deletion of certain information</li>
-                        <li>Object to or restrict certain processing</li>
-                        <li>Withdraw consent where processing is based on consent</li>
-                        <li>Manage advertising tracking permissions through your device settings</li>
-                        <li>Delete your account or disconnect your Telegram account where supported</li>
-                    </ul>
-                    <p>
-                        To exercise these rights, please contact us using the contact details listed below.
-                    </p>
-                </div>
-
-                <div class="policy-section">
-                    <h2>10. Account Deletion</h2>
-                    <p>
-                        You may request deletion of data associated with your use of Chataion by contacting us. If the app provides an in-app account deletion or disconnect option, you may also use that option directly.
-                    </p>
-                    <p>
-                        Please note that deleting or disconnecting data from Chataion does not automatically delete your Telegram account or data stored by Telegram. To delete your Telegram account or Telegram-hosted data, you must follow Telegram’s own account deletion process.
-                    </p>
-                </div>
-
-                <div class="policy-section">
-                    <h2>11. Children’s Privacy</h2>
-                    <p>
-                        Chataion Messenger is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.
-                    </p>
-                    <p>
-                        If we become aware that we have collected personal information from a child under 13 without appropriate consent, we will take reasonable steps to delete that information.
-                    </p>
-                </div>
-
-                <div class="policy-section">
-                    <h2>12. International Data Processing</h2>
-                    <p>
-                        Chataion and its service providers may process information in countries other than your country of residence. These countries may have data protection laws that differ from those in your jurisdiction.
-                    </p>
-                    <p>
-                        Where required, we take appropriate steps to protect personal information when it is transferred internationally.
-                    </p>
-                </div>
-
-                <div class="policy-section">
-                    <h2>13. Changes to This Privacy Policy</h2>
-                    <p>
-                        We may update this Privacy Policy from time to time to reflect changes in our app, services, legal requirements, or data practices.
-                    </p>
-                    <p>
-                        When we make material changes, we may notify you through the app, on our website, or by other appropriate means. The “Last Updated” date at the top of this page shows when the policy was most recently updated.
-                    </p>
-                </div>
-
-                <div class="policy-section">
-                    <h2>14. Contact Us</h2>
-                    <p>
-                        If you have questions, requests, or concerns about this Privacy Policy or our data practices, please contact us at:
-                    </p>
-                    <ul>
-                        <li>Email: <a href="mailto:chataion-privacy@routro.com">chataion-privacy@routro.com</a></li>
-                        <li>General support: <a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <a href="../index.html" class="back-link">← Back to Projects</a>
             </div>
         </section>
     </main>
