@@ -1,7 +1,17 @@
+
+/* ========================================
+   ROUTRO PROJECTS — GLOBAL STYLES
+   Neat Messenger
+   ======================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,11 +19,27 @@ body {
     color: #1f2937;
     background: #ffffff;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
+a {
+    color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
 header {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid #eef2f7;
     position: sticky;
     top: 0;
@@ -27,17 +53,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .logo h1 {
     font-size: 1.35rem;
     font-weight: 800;
     color: #2563eb;
+    letter-spacing: -0.03em;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -52,11 +81,23 @@ header {
     color: #2563eb;
 }
 
+/* ========================================
+   HERO
+   ======================================== */
+
 .hero {
     padding: 7rem 2rem;
     background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.22), transparent 35%),
-        linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+        radial-gradient(
+            circle at top left,
+            rgba(37, 99, 235, 0.22),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #2563eb 0%,
+            #7c3aed 100%
+        );
     color: #ffffff;
     text-align: center;
 }
@@ -92,11 +133,19 @@ header {
     color: rgba(255, 255, 255, 0.88);
 }
 
+/* ========================================
+   SHARED CONTAINER
+   ======================================== */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
+
+/* ========================================
+   PROJECTS SECTION
+   ======================================== */
 
 .projects {
     padding: 6rem 0;
@@ -145,7 +194,9 @@ header {
     border-radius: 24px;
     padding: 2.5rem;
     box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .project-card:hover {
@@ -161,12 +212,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
 .project-icon {
     width: 56px;
     height: 56px;
+    flex-shrink: 0;
     border-radius: 16px;
     background: #f3f4f6;
     color: #111827;
@@ -189,6 +242,7 @@ header {
     color: #2563eb;
     font-size: 0.8rem;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .project-status.muted {
@@ -227,6 +281,10 @@ header {
     font-weight: 600;
 }
 
+/* ========================================
+   BUTTONS
+   ======================================== */
+
 .project-links {
     display: flex;
     gap: 1rem;
@@ -242,7 +300,10 @@ header {
     border-radius: 12px;
     text-decoration: none;
     font-weight: 700;
-    transition: all 0.2s ease;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .btn-primary {
@@ -270,6 +331,10 @@ header {
     cursor: not-allowed;
 }
 
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
 .about {
     padding: 6rem 0;
     background: #f8fafc;
@@ -287,11 +352,25 @@ header {
     margin-bottom: 1rem;
 }
 
+/* ========================================
+   FOOTER
+   ======================================== */
+
 footer {
     padding: 2rem;
     background: #111827;
     color: #9ca3af;
     text-align: center;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -303,16 +382,34 @@ footer {
         gap: 1rem;
     }
 
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .logo h1 {
+        font-size: 1.15rem;
+    }
+
     .hero {
         padding: 5rem 1.25rem;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+    .projects,
+    .about {
+        padding: 4rem 0;
+    }
+
+    .container {
+        padding: 0 1.25rem;
     }
 
     .project-card {
         padding: 2rem;
+        border-radius: 20px;
     }
 
     .project-links {
@@ -321,5 +418,36 @@ footer {
 
     .btn {
         width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .nav-container {
+        gap: 0.5rem;
+    }
+
+    .nav-links {
+        gap: 0.75rem;
+    }
+
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    .project-top {
+        flex-wrap: wrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
     }
 }
